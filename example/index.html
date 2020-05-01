@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Grid CSS Test</title>
+
+		<link rel="stylesheet" href="../dist/grid.css">
+		<style>
+			body {
+				margin: 0;
+				background-color: #eee;
+			}
+
+			.grid > div {
+				background-color: #fff;
+				border: 1px solid #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid gap pad">
+			<div class="c-2 cm-3 cs-12 c-pad">C-2</div>
+			<div class="c-5 cm-9 rm-2 cs-12 c-pad">C-5</div>
+			<div class="c-2 cm-3 cs-12 c-pad">C-2</div>
+			<div class="c-3 cm-12 c-pad">C-3</div>
+		</div>
+	</body>
+</html>

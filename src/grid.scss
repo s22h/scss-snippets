@@ -1,0 +1,96 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+
+	&.gap {
+		grid-gap: 15px;
+		gap: 15px;
+	}
+
+	&.pad {
+		padding: 15px;
+	}
+
+	// COLUMNS
+	@for $i from 1 through 12 {
+		.c-#{$i} {
+			box-sizing: border-box;
+			grid-column: span #{$i};
+		}
+	}
+	
+	@media all and (max-width: 960px) {
+		@for $i from 1 through 12 {
+			.cm-#{$i} {
+				box-sizing: border-box;
+				grid-column: span #{$i};
+			}
+		}
+	}
+
+	@media all and (max-width: 640px) {
+		@for $i from 1 through 12 {
+			.cs-#{$i} {
+				box-sizing: border-box;
+				grid-column: span #{$i};
+			}
+		}
+	}
+
+	@media all and (max-width: 480px) {
+		@for $i from 1 through 12 {
+			.cxs-#{$i} {
+				box-sizing: border-box;
+				grid-column: span #{$i};
+			}
+		}
+	}
+
+	// ROWS
+	@for $i from 1 through 12 {
+		.r-#{$i} {
+			box-sizing: border-box;
+			grid-row: span #{$i};
+		}
+	}
+	
+	@media all and (max-width: 960px) {
+		@for $i from 1 through 12 {
+			.rm-#{$i} {
+				box-sizing: border-box;
+				grid-row: span #{$i};
+			}
+		}
+	}
+
+	@media all and (max-width: 640px) {
+		@for $i from 1 through 12 {
+			.rs-#{$i} {
+				box-sizing: border-box;
+				grid-row: span #{$i};
+			}
+		}
+	}
+
+	@media all and (max-width: 480px) {
+		@for $i from 1 through 12 {
+			.rxs-#{$i} {
+				box-sizing: border-box;
+				grid-row: span #{$i};
+			}
+		}
+	}
+
+	// PADDING
+	.c-pad {
+		padding: 10px;
+	}
+
+	.c-hpad {
+		padding: 0 10px;
+	}
+
+	.c-vpad {
+		padding: 10px 0;
+	}
+}
